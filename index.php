@@ -3,6 +3,7 @@
 include "class/includes.php";
 include "data.php";
 
+$isRender = $_GET['render'];
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -20,12 +21,15 @@ include "data.php";
 
 <div class="large-12 columns" style="overflow: visible">
 	<ul class="polaroids large-block-grid-4 small-block-grid-2">
-<?
+<?php
 $objects = $gallery->getObjects();
 foreach ($objects as $object) {
-
+  $path = 'view.php?id='.$object->getId();
+  if ($isRender) {
+    $path = 'view-'.$object->getId().'.html';
+  }
 	echo "\t\t<li>\n";
-	echo "\t\t<a href='view.php?id=".$object->getId()."' title='".$object->getName()."'>\n";
+	echo "\t\t<a href='".$path."' title='".$object->getName()."'>\n";
 	echo "\t\t\t<img alt='".$object->getName()."' src='images/thumbnail/".$object->getMainPhoto()->getPath()."' />\n";
 	echo "\t\t</a>\n";
 	echo "\t\t</li>\n";
@@ -37,5 +41,3 @@ foreach ($objects as $object) {
 
     </body>
 </html>
-
-

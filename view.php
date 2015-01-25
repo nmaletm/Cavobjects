@@ -4,6 +4,7 @@ include "class/includes.php";
 include "data.php";
 
 $id = $_REQUEST['id'];
+$isRender = $_GET['render'];
 
 $object = $gallery->getObject($id);
 ?>
@@ -23,7 +24,7 @@ $object = $gallery->getObject($id);
 
 <div class="large-12 columns" style="overflow: visible">
 	<ul class="polaroids large-block-grid-4 small-block-grid-2">
-<?
+<?php
 $photos = $object->getPhotos();
 
 foreach ($photos as $photo) {
@@ -37,8 +38,7 @@ foreach ($photos as $photo) {
 ?>
 	</ul>
 </div>
-<a href="index.php" class="backButton">&lt; Back</a>
-        <span class="storn-logo storn-logo-sticker"></span>
+        <a href="<?=($isRender)?'index.html':'index.php'?>" class="backButton">&lt; Back</a>
 
     </body>
 </html>
