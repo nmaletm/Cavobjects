@@ -59,6 +59,10 @@ if ($tools) {
   echo "</div>\n";
 }
 ?>
+
+<div class='textBlock'>
+  <a href="http://www.nestor.cat" target="_blank">Néstor Malet</a> - <?=$object->getDate();?>
+</div>
       <a href="<?=($isRender)?'index.html':'index.php'?>" class="backButton">&lt; Back</a>
 
     </body>
