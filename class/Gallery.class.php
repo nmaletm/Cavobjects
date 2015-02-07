@@ -27,4 +27,9 @@ class Gallery
 	{
 		return $this->objects[$id];
 	}
+
+	public function getObjectOrderDesc($id)
+	{
+		return array_reverse($this->objects, true);
+	}
 }

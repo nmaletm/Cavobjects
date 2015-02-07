@@ -16,13 +16,13 @@ $isRender = $_GET['render'];
     <link rel="stylesheet" type="text/css" media="all" href="http://tools.storn.es/estil.css" />
     <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
   </head>
-    <body >
+    <body class="page-main">
        <h1 class="pageTitle">Cavobjects</h1>
 
 <div class="large-12 columns" style="overflow: visible">
 	<ul class="polaroids large-block-grid-4 small-block-grid-2">
 <?php
-$objects = $gallery->getObjects();
+$objects = $gallery->getObjectOrderDesc();
 foreach ($objects as $object) {
   $path = 'view.php?id='.$object->getId();
   if ($isRender) {
@@ -30,7 +30,7 @@ foreach ($objects as $object) {
   }
 	echo "\t\t<li>\n";
 	echo "\t\t<a href='".$path."' title='".$object->getName()."'>\n";
-	echo "\t\t\t<img alt='".$object->getName()."' src='images/thumbnail/".$object->getMainPhoto()->getPath()."' />\n";
+	echo "\t\t\t<img alt='".$object->getName()."' src='".$object->getMainPhoto()->getRenderPath('thumbnail', $isRender)."' />\n";
 	echo "\t\t</a>\n";
 	echo "\t\t</li>\n";
 }

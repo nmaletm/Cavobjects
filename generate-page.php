@@ -13,10 +13,22 @@ $objects = $gallery->getObjects();
 foreach ($objects as $object) {
 	$path = 'view-'.$object->getId().'.html';
 	$pages[$path] = 'view.php?render=1&id='.$object->getId();
+
+	$photos = $object->getPhotos();
+
+	foreach ($photos as $photo) {
+		$photoPath = $photo->getPath();
+		$path = 'images/thumbnail/'.$photoPath;
+		$pages[$path] = 'photo.php?photo='.$photoPath.'&mode=thumbnail';
+		$path = 'images/big/'.$photoPath;
+		$pages[$path] = 'photo.php?photo='.$photoPath.'&mode=big';
+	}
+
 }
 
 foreach($pages as $path => $page){
 	$data = get('http://cavobjects.storn.es/'.$page);
+	echo $path."\n";
 	save($path, $data);
 }
 
@@ -41,7 +53,13 @@ function get($url){
 }
 
 function save($path, $data){
-	$file = fopen('build/'.$path, 'w+');
+	$buildPath = 'build/'.$path;
+	$dirname = dirname($buildPath);
+	if (!is_dir($dirname)) {
+		mkdir($dirname, 0777, true);
+	}
+
+	$file = fopen($buildPath, 'w+');
 	fwrite($file, $data);
 	fclose($file);
 }

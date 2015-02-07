@@ -16,4 +16,11 @@ class Photo
 		return $this->path;
 	}
 
+	public function getRenderPath($mode, $isRender)
+	{
+		if ($isRender) {
+			return 'images/' . $mode . '/' . $this->path;
+		}
+		return 'photo.php?photo=' . $this->path . '&mode='.$mode;
+	}
 }

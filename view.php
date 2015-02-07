@@ -19,7 +19,7 @@ $object = $gallery->getObject($id);
     <link rel="stylesheet" type="text/css" media="all" href="http://tools.storn.es/estil.css" />
     <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
   </head>
-    <body >
+    <body class="page-view">
        <h1 class="pageTitle"><?=$object->getName()?></h1>
 
 <div class="large-12 columns" style="overflow: visible">
@@ -31,7 +31,7 @@ foreach ($photos as $photo) {
 
 	echo "\t\t<li>\n";
 	echo "\t\t<a>\n";
-	echo "\t\t\t<img alt='".$object->getName()."' src='images/thumbnail/".$photo->getPath()."' />\n";
+	echo "\t\t\t<img alt='".$object->getName()."' src='".$photo->getRenderPath('big', $isRender)."' />\n";
 	echo "\t\t</a>\n";
 	echo "\t\t</li>\n";
 }
