@@ -38,7 +38,28 @@ foreach ($photos as $photo) {
 ?>
 	</ul>
 </div>
-        <a href="<?=($isRender)?'index.html':'index.php'?>" class="backButton">&lt; Back</a>
+<div style="clear:both"></div>
+
+<?php
+$materials = $object->getMaterialsString();
+if ($materials) {
+  echo "<div class='textBlock'>";
+  echo "<b>Used materials:</b><br>";
+  echo $materials;
+  echo "</div>\n";
+}
+?>
+
+<?php
+$tools = $object->getToolsString();
+if ($tools) {
+  echo "<div class='textBlock'>";
+  echo "<b>Used tools:</b><br>";
+  echo $tools;
+  echo "</div>\n";
+}
+?>
+      <a href="<?=($isRender)?'index.html':'index.php'?>" class="backButton">&lt; Back</a>
 
     </body>
 </html>

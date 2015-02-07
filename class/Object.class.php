@@ -6,21 +6,45 @@ class Object
 	/** @var int */
 	private $id;
 
-	/** @var string */
-	private $name;
-
 	/** @var array */
 	private $photos;
 
 	/** @var string */
+	private $name;
+
+	/** @var string */
 	private $date;
 
-	public function __construct($id, $name, $date, $photos)
+	/** @var array */
+	private $materials;
+
+	/** @var array */
+	private $tools;
+
+	public function __construct($id, $photos)
 	{
 		$this->id = $id;
-		$this->name = $name;
-		$this->date = $date;
 		$this->photos = $photos;
+	}
+
+	public function setName($name)
+	{
+		$this->name = $name;
+	}
+
+	public function setDate($date)
+	{
+		$this->date = $date;
+	}
+
+	public function setMaterials($materials)
+	{
+		$this->materials = $materials;
+	}
+
+	public function setTools($tools)
+	{
+		$this->tools = $tools;
 	}
 
 	public function getId()
@@ -28,19 +52,40 @@ class Object
 		return $this->id;
 	}
 
-	public function getName()
-	{
-		return $this->name;
-	}
-
 	public function getPhotos()
 	{
 		return $this->photos;
 	}
 
+	public function getName()
+	{
+		return $this->name;
+	}
+
 	public function getDate()
 	{
 		return $this->date;
+	}
+	
+	public function getMaterials()
+	{
+		return $this->materials;
+	}
+	
+	public function getTools()
+	{
+		return $this->tools;
+	}
+
+	
+	public function getMaterialsString()
+	{
+		return implode(', ', $this->materials);
+	}
+
+	public function getToolsString()
+	{
+		return implode(', ', $this->tools);
 	}
 
 	public function getMainPhoto()
