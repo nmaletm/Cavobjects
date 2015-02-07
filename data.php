@@ -16,6 +16,7 @@ $photos = array(
 	new Photo('Balloon/ballon-1.jpg'),
 	new Photo('Balloon/ballon-2.jpg'),
 	new Photo('Balloon/ballon-3.jpg'),
+	new Photo('Balloon/ballon-4.jpg'),
 );
 $object = new Object($i++, 'Ballon', '30/12/2014', $photos);
 $gallery->addObject($object);

@@ -1,4 +1,5 @@
 <?php
+include "class/includes.php";
 
 $photo = $_GET['photo'];
 $mode = $_GET['mode'];
@@ -8,14 +9,19 @@ if (!$photo || !$mode) {
 }
 
 switch ($mode) {
-	case 'thumbnail':
+	case Photo::SIZE_THUMBNAIL:
 		$height = 300;
 		$width = 300;
 		break;
 	
-	case 'big':
+	case Photo::SIZE_NORMAL:
 		$height = 600;
 		$width = 600;
+		break;
+	
+	case Photo::SIZE_LARGE:
+		$height = 1000;
+		$width = 1000;
 		break;
 
 	default:

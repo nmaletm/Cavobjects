@@ -30,8 +30,8 @@ $photos = $object->getPhotos();
 foreach ($photos as $photo) {
 
 	echo "\t\t<li>\n";
-	echo "\t\t<a>\n";
-	echo "\t\t\t<img alt='".$object->getName()."' src='".$photo->getRenderPath('big', $isRender)."' />\n";
+	echo "\t\t<a href='".$photo->getRenderPath(Photo::SIZE_LARGE, $isRender)."'>\n";
+	echo "\t\t\t<img alt='".$object->getName()."' src='".$photo->getRenderPath(Photo::SIZE_NORMAL, $isRender)."' />\n";
 	echo "\t\t</a>\n";
 	echo "\t\t</li>\n";
 }

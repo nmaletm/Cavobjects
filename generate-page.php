@@ -18,10 +18,12 @@ foreach ($objects as $object) {
 
 	foreach ($photos as $photo) {
 		$photoPath = $photo->getPath();
-		$path = 'images/thumbnail/'.$photoPath;
-		$pages[$path] = 'photo.php?photo='.$photoPath.'&mode=thumbnail';
-		$path = 'images/big/'.$photoPath;
-		$pages[$path] = 'photo.php?photo='.$photoPath.'&mode=big';
+
+		$sizes = $photo->getSizes();
+		foreach ($sizes as $size) {
+			$path = 'images/'.$size.'/'.$photoPath;
+			$pages[$path] = 'photo.php?photo='.$photoPath.'&mode='.$size;
+		}
 	}
 
 }

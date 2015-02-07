@@ -30,7 +30,7 @@ foreach ($objects as $object) {
   }
 	echo "\t\t<li>\n";
 	echo "\t\t<a href='".$path."' title='".$object->getName()."'>\n";
-	echo "\t\t\t<img alt='".$object->getName()."' src='".$object->getMainPhoto()->getRenderPath('thumbnail', $isRender)."' />\n";
+	echo "\t\t\t<img alt='".$object->getName()."' src='".$object->getMainPhoto()->getRenderPath(Photo::SIZE_THUMBNAIL, $isRender)."' />\n";
 	echo "\t\t</a>\n";
 	echo "\t\t</li>\n";
 }
