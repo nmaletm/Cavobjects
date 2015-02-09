@@ -96,4 +96,12 @@ class Object
 		return $this->photos[0];
 	}
 
+	public function getRenderPath($isRender)
+	{
+		if ($isRender) {
+			return 'view-' . $this->getId() . '.html';
+		}
+			return 'view.php?id=' . $this->getId();
+	}
+
 }

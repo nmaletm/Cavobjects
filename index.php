@@ -24,12 +24,8 @@ $isRender = $_GET['render'];
 <?php
 $objects = $gallery->getObjectOrderDesc();
 foreach ($objects as $object) {
-  $path = 'view.php?id='.$object->getId();
-  if ($isRender) {
-    $path = 'view-'.$object->getId().'.html';
-  }
 	echo "\t\t<li>\n";
-	echo "\t\t<a href='".$path."' title='".$object->getName()."'>\n";
+	echo "\t\t<a href='".$object->getRenderPath($isRender)."' title='".$object->getName()."'>\n";
 	echo "\t\t\t<img alt='".$object->getName()."' src='".$object->getMainPhoto()->getRenderPath(Photo::SIZE_THUMBNAIL, $isRender)."' />\n";
 	echo "\t\t</a>\n";
 	echo "\t\t</li>\n";

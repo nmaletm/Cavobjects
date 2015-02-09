@@ -1,5 +1,10 @@
 <?php
 
+$server = 'http://cavobjects.storn.es/';
+if ($_GET['render']) {
+	$server = 'http://nmaletm.github.io/Cavobjects/';
+}
+
 $gallery = new Gallery();
 
 $i = 1;
@@ -12,7 +17,7 @@ $object = new Object($i++, $photos);
 $object->setName('Spider');
 $object->setDate('25/12/2014');
 $object->setMaterials(array('cork stopper', 'cava wire'));
-$object->setTools(array('pliers', 'bread knife', 'pen'));
+$object->setTools(array('pliers', 'knife', 'pen'));
 $gallery->addObject($object);
 
 
@@ -26,7 +31,7 @@ $object = new Object($i++, $photos);
 $object->setName('Ballon');
 $object->setDate('30/12/2014');
 $object->setMaterials(array('cork stopper', 'cava wire', 'Trovit ball'));
-$object->setTools(array('pliers', 'bread knife'));
+$object->setTools(array('pliers', 'knife'));
 $gallery->addObject($object);
 
 
@@ -51,7 +56,7 @@ $object = new Object($i++, $photos);
 $object->setName('Bear');
 $object->setDate('18/01/2015');
 $object->setMaterials(array('cork stopper', 'cava wire', 'Magnum After Dinner paper'));
-$object->setTools(array('pliers', 'bread knife', 'pen'));
+$object->setTools(array('pliers', 'knife', 'pen'));
 $gallery->addObject($object);
 
 
@@ -65,7 +70,7 @@ $object = new Object($i++, $photos);
 $object->setName('Man (stand up)');
 $object->setDate('18/01/2015');
 $object->setMaterials(array('cork stopper', 'cava wire', 'Magnum After Dinner paper'));
-$object->setTools(array('pliers', 'bread knife', 'pen'));
+$object->setTools(array('pliers', 'knife', 'pen'));
 $gallery->addObject($object);
 
 
@@ -77,7 +82,7 @@ $object = new Object($i++, $photos);
 $object->setName('Man (sit down)');
 $object->setDate('18/01/2015');
 $object->setMaterials(array('cork stopper', 'cava wire', 'Magnum After Dinner paper'));
-$object->setTools(array('pliers', 'bread knife', 'pen'));
+$object->setTools(array('pliers', 'knife', 'pen'));
 $gallery->addObject($object);
 
 
@@ -91,7 +96,7 @@ $object = new Object($i++, $photos);
 $object->setName('Chairlift');
 $object->setDate('01/02/2015');
 $object->setMaterials(array('cork stopper', 'cava wire', 'cava cap blocker'));
-$object->setTools(array('pliers', 'bread knife', 'pen', 'iron rasp'));
+$object->setTools(array('pliers', 'knife', 'pen', 'iron rasp'));
 $gallery->addObject($object);
 
 
@@ -106,6 +111,31 @@ $photos = array(
 $object = new Object($i++, $photos);
 $object->setName('Plane');
 $object->setDate('07/02/2015');
-$object->setMaterials(array('cork stopper', 'cava wire', 'Magnum After Dinner paper', 'Magnum stick'));
-$object->setTools(array('pliers', 'bread knife', 'pen', 'scissors'));
+$object->setMaterials(array('cork stopper', 'cava wire', 'Magnum After Dinner paper', 'Magnum stick', 'water bottle cap'));
+$object->setTools(array('pliers', 'knife', 'pen', 'scissors'));
+$gallery->addObject($object);
+
+$photos = array(
+	new Photo('Sailboat/sailboat-1.jpg'),
+	new Photo('Sailboat/sailboat-2.jpg'),
+	new Photo('Sailboat/sailboat-3.jpg'),
+);
+$object = new Object($i++, $photos);
+$object->setName('Sailboat');
+$object->setDate('08/02/2015');
+$object->setMaterials(array('cork stopper', 'cava wire', 'toothpick'));
+$object->setTools(array('pliers', 'knife', 'scissors', 'adhesive tape'));
+$gallery->addObject($object);
+
+$photos = array(
+	new Photo('Bike/bike-1.jpg'),
+	new Photo('Bike/bike-2.jpg'),
+	new Photo('Bike/bike-3.jpg'),
+	new Photo('Bike/bike-4.jpg'),
+);
+$object = new Object($i++, $photos);
+$object->setName('Bike');
+$object->setDate('08/02/2015');
+$object->setMaterials(array('cork stopper', 'cava wire'));
+$object->setTools(array('pliers', 'knife'));
 $gallery->addObject($object);
