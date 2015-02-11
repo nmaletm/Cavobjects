@@ -46,20 +46,20 @@ $url = $server.$object->getRenderPath($isRender);
        <h1 class="pageTitle"><?=$object->getName()?></h1>
 
 <div class="large-12 columns" style="overflow: visible">
-	<ul class="polaroids large-block-grid-4 small-block-grid-2">
+	<div class="polaroids large-block-grid-4 small-block-grid-2">
 <?php
 $photos = $object->getPhotos();
 
 foreach ($photos as $photo) {
 
-	echo "\t\t<li>\n";
+	echo "\t\t<div>\n";
 	echo "\t\t<a href='".$photo->getRenderPath(Photo::SIZE_LARGE, $isRender)."'>\n";
 	echo "\t\t\t<img alt='".$object->getName()."' src='".$photo->getRenderPath(Photo::SIZE_NORMAL, $isRender)."' />\n";
 	echo "\t\t</a>\n";
-	echo "\t\t</li>\n";
+	echo "\t\t</div>\n";
 }
 ?>
-	</ul>
+	</div>
 </div>
 <div style="clear:both"></div>
 
