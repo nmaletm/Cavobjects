@@ -139,3 +139,16 @@ $object->setDate('08/02/2015');
 $object->setMaterials(array('cork stopper', 'cava wire'));
 $object->setTools(array('pliers', 'knife'));
 $gallery->addObject($object);
+
+$photos = array(
+	new Photo('Boat/boat-1.jpg'),
+	new Photo('Boat/boat-2.jpg'),
+	new Photo('Boat/boat-3.jpg'),
+	new Photo('Boat/boat-4.jpg'),
+);
+$object = new Object($i++, $photos);
+$object->setName('Boat');
+$object->setDate('10/02/2015');
+$object->setMaterials(array('cork stopper', 'cava wire'));
+$object->setTools(array('pliers', 'knife'));
+$gallery->addObject($object);
