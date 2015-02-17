@@ -124,7 +124,7 @@ $object = new Object($i++, $photos);
 $object->setName('Sailboat');
 $object->setDate('08/02/2015');
 $object->setMaterials(array('cork stopper', 'cava wire', 'toothpick'));
-$object->setTools(array('pliers', 'knife', 'scissors', 'adhesive tape'));
+$object->setTools(array('pliers', 'knife', 'scissors', 'adhesive tape', 'pen'));
 $gallery->addObject($object);
 
 $photos = array(
@@ -151,4 +151,33 @@ $object->setName('Boat');
 $object->setDate('10/02/2015');
 $object->setMaterials(array('cork stopper', 'cava wire'));
 $object->setTools(array('pliers', 'knife'));
+$gallery->addObject($object);
+
+$photos = array(
+	new Photo('Dog/dog-1.jpg'),
+	new Photo('Dog/dog-2.jpg'),
+	new Photo('Dog/dog-3.jpg'),
+	new Photo('Dog/dog-4.jpg'),
+);
+$object = new Object($i++, $photos);
+$object->setName('Dog');
+$object->setDate('11/02/2015');
+$object->setMaterials(array('cork stopper', 'cava wire'));
+$object->setTools(array('pliers', 'knife', 'pen'));
+$gallery->addObject($object);
+
+$photos = array(
+	new Photo('Car/car-1.jpg'),
+	new Photo('Car/car-2.jpg'),
+	new Photo('Car/car-3.jpg'),
+	new Photo('Car/car-4.jpg'),
+	new Photo('Car/car-5.jpg'),
+	new Photo('Car/car-6.jpg'),
+	new Photo('Car/car-7.jpg'),
+);
+$object = new Object($i++, $photos);
+$object->setName('Car');
+$object->setDate('16/02/2015');
+$object->setMaterials(array('cork stopper', 'cava wire'));
+$object->setTools(array('pliers', 'knife', 'pen'));
 $gallery->addObject($object);
