@@ -15,6 +15,16 @@ h1, h2, h3, h4, h5, h6 {
 	text-rendering: optimizelegibility;
 }
 
+a{
+  text-decoration: none;
+}
+
+.text-row{
+  text-align: left;
+  max-width: 100%;
+  padding: 10px 20px;
+}
+
 .backButton{
 	color: #222222;
 	position: absolute;
@@ -43,6 +53,11 @@ h1, h2, h3, h4, h5, h6 {
 .textBlock{
   margin-bottom: 10px;
   padding: 10px;
+}
+
+#info-open{
+  cursor: pointer;
+  text-align:center;
 }
 
 /* http://zurb.com/playground/css3-polaroids */
@@ -81,7 +96,7 @@ div.polaroids a
 div.polaroids img
 {
   display:block;
-  width:190px;
+  width:300px;
   margin-bottom:12px;
   max-width:100%;
 }
@@ -147,13 +162,78 @@ div.polaroids div a:hover
 
 .page-view div.polaroids img
 {
-  width:320px;
+  width:400px;
   margin-bottom: 0;
 }
 
-@media screen and (max-width 768px) {
-  div.polaroids div a
-  {
+.rocket-spin{
+  text-align: center;
+  font-size: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.rocket-spin i {
+    -webkit-animation:8s linear 0s normal none infinite running fa-spin;
+    -moz-animation:8s linear 0s normal none infinite running fa-spin;
+    animation:8s linear 0s normal none infinite running fa-spin;
+}
+
+/* Extracted from http://bradsknutson.com/blog/css-notepad-paper/ */
+.notepad {
+    font-family: 'Indie Flower', cursive;
+    padding: 10px 20px 80px 30px;
+    margin: 50px auto;
+    max-width: 100%;
+    width: 600px;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    -moz-transform: rotate(-4deg);
+    -o-transform: rotate(-4deg);
+    -webkit-transform: rotate(-4deg);
+    background: #fcf59b;
+  background:
+    -webkit-gradient(
+      linear,
+      left top, left bottom,
+      from(#81cbbc),
+      color-stop(2%, #fcf59b)
+    );
+  background:
+    -moz-repeating-linear-gradient(
+      top,
+      #fcf59b,
+      #fcf59b 38px,
+      #81cbbc 40px
+    );
+  background:
+    repeating-linear-gradient(
+      top,
+      #fcf59b,
+      #fcf59b 38px,
+      #81cbbc 40px
+    );    
+  -webkit-background-size: 100% 40px;
+}
+p {
+    font-size: 28px;
+    line-height: 41px;
+}
+
+@media screen and (max-width: 620px) {
+  .notepad{
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div.polaroids div a{
     margin-left:0;
   }
 }
@@ -166,9 +246,9 @@ div.polaroids div a:hover
     margin: 0 0 27px;
   }
 
-  div.polaroids div a:hover
-  {
+  div.polaroids div a:hover{
     -webkit-transform:scale(1);
     -moz-transform:scale(1);
   }
 }
+

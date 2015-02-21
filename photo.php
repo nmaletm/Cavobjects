@@ -10,8 +10,8 @@ if (!$photo || !$mode) {
 
 switch ($mode) {
 	case Photo::SIZE_THUMBNAIL:
-		$height = 300;
-		$width = 300;
+		$height = 400;
+		$width = 400;
 		$crop = true;
 		break;
 	

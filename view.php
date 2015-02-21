@@ -23,8 +23,8 @@ $url = $server.$object->getRenderPath($isRender);
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
     <meta name="description" content="Pagina  de  Storn.es"/>
     <link href="http://www.storn.es/favicon.ico" rel="icon" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" media="all" href="http://tools.storn.es/estil.css" />
     <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <meta name="twitter:card" content="photo" />
     <meta name="twitter:site" content="@NestorMalet" />
     <meta name="twitter:creator" content="@NestorMalet" />
@@ -67,7 +67,7 @@ foreach ($photos as $photo) {
 $materials = $object->getMaterialsString();
 if ($materials) {
   echo "<div class='textBlock'>";
-  echo "<b>Used materials:</b><br>";
+  echo "<b><i class='fa fa-cubes'></i> Used materials:</b><br>";
   echo $materials;
   echo "</div>\n";
 }
@@ -77,16 +77,18 @@ if ($materials) {
 $tools = $object->getToolsString();
 if ($tools) {
   echo "<div class='textBlock'>";
-  echo "<b>Used tools:</b><br>";
+  echo "<b><i class='fa fa-wrench'></i> Used tools:</b><br>";
   echo $tools;
   echo "</div>\n";
 }
 ?>
 
 <div class='textBlock'>
-  <a href="http://www.nestor.cat" target="_blank">Néstor Malet</a> - <?=$object->getDate();?>
+  <i class="fa fa-rocket"></i> Cavobjects - 
+  <a href="http://www.nestor.cat" target="_blank"><i class="fa fa-user"></i> Néstor Malet</a> - 
+  <?=$object->getDate();?>
 </div>
-      <a href="<?=($isRender)?'index.html':'index.php'?>" class="backButton">&lt; Back</a>
+      <a href="<?=($isRender)?'index.html':'index.php'?>" class="backButton"><i class="fa fa-chevron-left"></i> Back</a>
 
     </body>
 </html>

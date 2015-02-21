@@ -173,11 +173,24 @@ $photos = array(
 	new Photo('Car/car-4.jpg'),
 	new Photo('Car/car-5.jpg'),
 	new Photo('Car/car-6.jpg'),
-	new Photo('Car/car-7.jpg'),
 );
 $object = new Object($i++, $photos);
 $object->setName('Car');
 $object->setDate('16/02/2015');
 $object->setMaterials(array('cork stopper', 'cava wire'));
 $object->setTools(array('pliers', 'knife', 'pen'));
+$gallery->addObject($object);
+
+$photos = array(
+	new Photo('Moto/moto-1.jpg'),
+	new Photo('Moto/moto-2.jpg'),
+	new Photo('Moto/moto-3.jpg'),
+	new Photo('Moto/moto-4.jpg'),
+	new Photo('Moto/moto-5.jpg'),
+);
+$object = new Object($i++, $photos);
+$object->setName('Motorbike');
+$object->setDate('19/02/2015');
+$object->setMaterials(array('cork stopper', 'cava wire'));
+$object->setTools(array('pliers', 'knife', 'pens'));
 $gallery->addObject($object);
