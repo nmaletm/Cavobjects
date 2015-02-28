@@ -114,10 +114,10 @@ div.polaroids div:nth-child(even) a
 
 div.polaroids div:nth-child(3n) a
 {
-  -webkit-transform:none;
+  -webkit-transform:rotate(-1deg);
   position:relative;
   top:-5px;
-  -moz-transform:none;
+  -moz-transform:rotate(-1deg);
 }
 
 div.polaroids div:nth-child(5n) a

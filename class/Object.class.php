@@ -6,8 +6,8 @@ class Object
 	/** @var int */
 	private $id;
 
-	/** @var array */
-	private $photos;
+	/** @var PhotoGallery */
+	private $photoGallery;
 
 	/** @var string */
 	private $name;
@@ -21,10 +21,14 @@ class Object
 	/** @var array */
 	private $tools;
 
-	public function __construct($id, $photos)
+	public function __construct($id)
 	{
 		$this->id = $id;
-		$this->photos = $photos;
+	}
+
+	public function initGallery($pathTemplate, $numPhotos)
+	{
+		$this->photoGallery = new PhotoGallery($pathTemplate, $numPhotos);
 	}
 
 	public function setName($name)
@@ -54,7 +58,7 @@ class Object
 
 	public function getPhotos()
 	{
-		return $this->photos;
+		return $this->photoGallery->getPhotos();
 	}
 
 	public function getName()
@@ -90,10 +94,11 @@ class Object
 
 	public function getMainPhoto()
 	{
-		if (!count($this->photos)) {
+		$photos = $this->getPhotos();
+		if (!count($photos)) {
 			return null;
 		}
-		return $this->photos[0];
+		return $photos[0];
 	}
 
 	public function getRenderPath($isRender)
