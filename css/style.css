@@ -252,3 +252,13 @@ p {
   }
 }
 
+
+@media screen and (max-width: 380px) {
+  .pageTitle{
+    font-size: 25px;
+  }
+  .backButton{
+    font-size: 18px;
+    top: 45px;
+  }
+}

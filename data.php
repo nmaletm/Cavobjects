@@ -135,6 +135,15 @@ $gallery->addObject($object);
 
 
 $object = new Object($i++, $photos);
+$object->initGallery('Windmill/windmill-%d.jpg', 4);
+$object->setName('Windmill');
+$object->setDate('23/02/2015');
+$object->setMaterials(array('cork stopper', 'cava wire'));
+$object->setTools(array('pliers', 'knife', 'pens','Magnum After Dinner paper'));
+$gallery->addObject($object);
+
+
+$object = new Object($i++, $photos);
 $object->initGallery('Mouse/mouse-%d.jpg', 5);
 $object->setName('Computer mouse');
 $object->setDate('27/02/2015');
@@ -156,6 +165,15 @@ $object = new Object($i++, $photos);
 $object->initGallery('OldTv/old-tv-%d.jpg', 6);
 $object->setName('Old television');
 $object->setDate('27/02/2015');
+$object->setMaterials(array('cork stopper', 'cava wire'));
+$object->setTools(array('pliers', 'knife', 'pens'));
+$gallery->addObject($object);
+
+
+$object = new Object($i++, $photos);
+$object->initGallery('Headphone/headphone-%d.jpg', 4);
+$object->setName('Headphone');
+$object->setDate('28/02/2015');
 $object->setMaterials(array('cork stopper', 'cava wire'));
 $object->setTools(array('pliers', 'knife', 'pens'));
 $gallery->addObject($object);
