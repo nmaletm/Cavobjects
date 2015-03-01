@@ -175,5 +175,24 @@ $object->initGallery('Headphone/headphone-%d.jpg', 4);
 $object->setName('Headphone');
 $object->setDate('28/02/2015');
 $object->setMaterials(array('cork stopper', 'cava wire'));
+$object->setTools(array('pliers', 'knife'));
+$gallery->addObject($object);
+
+
+$object = new Object($i++, $photos);
+$object->initGallery('Laptop/laptop-%d.jpg', 4);
+$object->setName('Laptop');
+$object->setDate('01/03/2015');
+$object->setMaterials(array('cork stopper', 'cava wire'));
 $object->setTools(array('pliers', 'knife', 'pens'));
 $gallery->addObject($object);
+
+
+$object = new Object($i++, $photos);
+$object->initGallery('Woman/woman-%d.jpg', 3);
+$object->setName('Woman');
+$object->setDate('01/03/2015');
+$object->setMaterials(array('cork stopper', 'cava wire'));
+$object->setTools(array('pliers', 'knife', 'pens'));
+$gallery->addObject($object);
+
