@@ -25,6 +25,9 @@ $url = $server.$object->getRenderPath($isRender);
     <link href="http://www.storn.es/favicon.ico" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <meta name="twitter:card" content="photo" />
     <meta name="twitter:site" content="@NestorMalet" />
     <meta name="twitter:creator" content="@NestorMalet" />
@@ -63,11 +66,62 @@ foreach ($photos as $photo) {
 </div>
 <div style="clear:both"></div>
 
+<div class='textBlock'>
+  <h3><?=$object->getName()?></h3>
+
+<b title="The score of this Cavobject compared to the other ones (in my opinion)" class="tooltip-anchor">
+  "Nestor's score":
+  <i class="fa fa-info-circle"></i>
+</b> 
+<br>
+
+<?php
+$mark = $object->getMark()/2;
+for($i = 1; $i <= 5; $i++) {
+  echo "<i class='fa ";
+  if (($i - 0.5) == $mark) {
+    echo "fa-star-half-o";
+  } else if($i <= $mark) {
+    echo "fa-star";
+  } else {
+    echo "fa-star-o";
+  }
+  echo "'></i>";
+}
+echo '&nbsp;&nbsp; <small>('.$object->getMark()." / 10)</small>";
+echo "\n";
+?>
+</div>
+<div class='textBlock'>
+
+<b title="The level of difficulty of this Cavobject compared to the other ones (in my opinion)" class="tooltip-anchor">
+  Difficulty":
+  <i class="fa fa-info-circle"></i>
+</b> 
+<br>
+<?php
+$difficulty = $object->getDifficulty()/2;
+for($i = 1; $i <= 5; $i++) {
+  echo "<i class='fa ";
+  if (($i - 0.5) == $difficulty) {
+    echo "fa-star-half-o";
+  } else if($i <= $difficulty) {
+    echo "fa-star";
+  } else {
+    echo "fa-star-o";
+  }
+  echo "'></i>";
+}
+echo '&nbsp;&nbsp; <small>('.$object->getDifficulty()." / 10)</small>";
+echo "\n";
+?>
+</div>
+
 <?php
 $materials = $object->getMaterialsString();
 if ($materials) {
   echo "<div class='textBlock'>";
-  echo "<b><i class='fa fa-cubes'></i> Used materials:</b><br>";
+  echo "<b>Used materials:</b><br>";
   echo $materials;
   echo "</div>\n";
 }
@@ -77,19 +131,36 @@ if ($materials) {
 $tools = $object->getToolsString();
 if ($tools) {
   echo "<div class='textBlock'>";
-  echo "<b><i class='fa fa-wrench'></i> Used tools:</b><br>";
+  echo "<b>Used tools <i class='fa fa-wrench'></i> :</b><br>";
   echo $tools;
   echo "</div>\n";
 }
 ?>
 
-<div class='textBlock'>
+<div class='textBlock center'>
   <i class="fa fa-rocket"></i> Cavobjects - 
   <a href="http://www.nestor.cat" target="_blank"><i class="fa fa-user"></i> Néstor Malet</a> - 
   <?=$object->getDate();?>
 </div>
-      <a href="<?=($isRender)?'index.html':'index.php'?>" class="backButton"><i class="fa fa-chevron-left"></i> Back</a>
 
+
+<a href="<?=($isRender)?'index.html':'index.php'?>" class="backButton"><i class="fa fa-chevron-left"></i> Back</a>
+
+<script>
+$(function() {
+  //$(document).tooltip();
+  $(".tooltip-anchor").click(function () {
+    var anchor = this;
+    $(anchor).tooltip({ 
+      position: { my: "left+15 center", at: "center+20 center" }
+    });
+    $(anchor).tooltip("open");
+    setTimeout(function(){
+      $(anchor).tooltip("destroy");
+    }, 5*1000);
+  });
+});
+</script>
     </body>
 </html>
 

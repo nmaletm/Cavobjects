@@ -5,7 +5,10 @@ include "class/includes.php";
 include "data.php";
 
 $pages = array(
-	'index.html' => 'index.php?render=1'
+	'index.html' => 'index.php?render=1',
+	'sortByMark.html' => 'index.php?sort=mark&render=1',
+	'sortByDate.html' => 'index.php?sort=date&render=1',
+	'sortByDifficulty.html' => 'index.php?sort=difficulty&render=1',
 );
 
 $objects = $gallery->getObjects();

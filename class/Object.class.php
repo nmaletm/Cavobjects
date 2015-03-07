@@ -21,6 +21,12 @@ class Object
 	/** @var array */
 	private $tools;
 
+	/** @var int */
+	private $mark;
+
+	/** @var int */
+	private $difficulty;
+
 	public function __construct($id)
 	{
 		$this->id = $id;
@@ -51,6 +57,17 @@ class Object
 		$this->tools = $tools;
 	}
 
+	public function setMark($mark)
+	{
+		$this->mark = $mark;
+	}
+
+	public function setDifficulty($difficulty)
+	{
+		$this->difficulty = $difficulty;
+	}
+
+
 	public function getId()
 	{
 		return $this->id;
@@ -79,6 +96,16 @@ class Object
 	public function getTools()
 	{
 		return $this->tools;
+	}
+	
+	public function getMark()
+	{
+		return $this->mark;
+	}
+	
+	public function getDifficulty()
+	{
+		return $this->difficulty;
 	}
 
 	
