@@ -23,18 +23,21 @@ if ($sort === 'date') {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Cavobjects Storn.es</title>
+    <title>Cavobjects - DIY objects</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
     <meta name="description" content="Cavobjects Storn.es"/>
+    <meta name="google-site-verification" content="ZyroqDf8mPCyXkkQTeu-v-FFBdg-3bedfFn6kvwPnhk" />
     <link href="http://www.storn.es/favicon.ico" rel="icon" type="image/x-icon" />
+<?php if (!($isRender && !empty($sort)) { ?>
+    <link rel="canonical" href="<?=$serverPublic?>" />
+<?php } ?>
     <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.css">
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-    <meta name="google-site-verification" content="ZyroqDf8mPCyXkkQTeu-v-FFBdg-3bedfFn6kvwPnhk" />
    </head>
   <body class="page-main">
     <h1 class="pageTitle"><i class="fa fa-rocket"></i> Cavobjects</h1>
@@ -135,5 +138,6 @@ $(function() {
 });
 
 </script>
+<?php include "tracking.php" ?>
     </body>
 </html>

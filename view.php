@@ -13,6 +13,7 @@ $image = $server.$object->getMainPhoto()->getRenderPath(Photo::SIZE_NORMAL, $isR
 $title = $object->getName() . ' cavobject';
 $description = 'During family launch and dinners, I usually play with the Cava bottle cap. Here you can see the object '.$object->getName();
 $url = $server.$object->getRenderPath($isRender);
+$urlPublic = $serverPublic.$object->getRenderPath(true);
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -23,6 +24,7 @@ $url = $server.$object->getRenderPath($isRender);
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
     <meta name="description" content="Pagina  de  Storn.es"/>
     <link href="http://www.storn.es/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="canonical" href="<?=$urlPublic?>" />
     <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.css">
@@ -95,7 +97,7 @@ echo "\n";
 <div class='textBlock'>
 
 <b title="The level of difficulty of this Cavobject compared to the other ones (in my opinion)" class="tooltip-anchor">
-  Difficulty":
+  Difficulty:
   <i class="fa fa-info-circle"></i>
 </b> 
 <br>
@@ -161,6 +163,7 @@ $(function() {
   });
 });
 </script>
+<?php include "tracking.php" ?>
     </body>
 </html>
 

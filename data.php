@@ -5,6 +5,7 @@ $server = 'http://cavobjects.storn.es/';
 if ($_GET['render']) {
 	$server = 'http://nmaletm.github.io/Cavobjects/';
 }
+$serverPublic = 'http://nmaletm.github.io/Cavobjects/';
 
 $gallery = new Gallery();
 
