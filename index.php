@@ -29,7 +29,7 @@ if ($sort === 'date') {
     <meta name="description" content="Cavobjects Storn.es"/>
     <meta name="google-site-verification" content="ZyroqDf8mPCyXkkQTeu-v-FFBdg-3bedfFn6kvwPnhk" />
     <link href="http://www.storn.es/favicon.ico" rel="icon" type="image/x-icon" />
-<?php if (!($isRender && !empty($sort)) { ?>
+<?php if (!$isRender && !empty($sort)) { ?>
     <link rel="canonical" href="<?=$serverPublic?>" />
 <?php } ?>
     <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />

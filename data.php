@@ -242,3 +242,14 @@ $object->setDifficulty(6);
 $gallery->addObject($object);
 
 
+$object = new Object(22);
+$object->initGallery('Ketchup/ketchup-%d.jpg', 5);
+$object->setName('Ketchup');
+$object->setDate('05/03/2015');
+$object->setMaterials(array('cork stopper'));
+$object->setTools(array('pliers', 'knife', 'pens'));
+$object->setMark(6);
+$object->setDifficulty(4);
+$gallery->addObject($object);
+
+
