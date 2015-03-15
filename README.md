@@ -4,4 +4,4 @@ During family launch and dinners, I usually play with the [Cava](http://en.wikip
 
 <img src="images/cap.jpg" />
 
-You can view the website here: http://nmaletm.github.io/Cavobjects
+You can view the website here: http://www.cavobject.com/
