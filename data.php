@@ -3,9 +3,9 @@
 
 $server = 'http://cavobjects.storn.es/';
 if ($_GET['render']) {
-	$server = 'http://nmaletm.github.io/Cavobjects/';
+	$server = 'http://www.cavobject.com/';
 }
-$serverPublic = 'http://nmaletm.github.io/Cavobjects/';
+$serverPublic = 'http://www.cavobject.com/';
 
 $gallery = new Gallery();
 

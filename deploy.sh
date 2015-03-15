@@ -14,12 +14,5 @@ cp -r images ${DIRDEPLOY}
 cp -r css ${DIRDEPLOY}
 cp -r js ${DIRDEPLOY}
 cp -r build/* ${DIRDEPLOY}
+cp -r copy/* ${DIRDEPLOY}
 
-
-
-echo "Deploy to github.com"
-cd ${DIRDEPLOY}
-git add .
-git commit -am "Deploy"
-git push origin gh-pages
-echo "Deployed"

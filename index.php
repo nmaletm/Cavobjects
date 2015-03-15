@@ -26,9 +26,7 @@ if ($sort === 'date') {
     <title>Cavobjects - DIY objects</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
-    <meta name="description" content="Cavobjects Storn.es"/>
-    <meta name="google-site-verification" content="ZyroqDf8mPCyXkkQTeu-v-FFBdg-3bedfFn6kvwPnhk" />
-    <link href="http://www.storn.es/favicon.ico" rel="icon" type="image/x-icon" />
+    <meta name="description" content="Cavobjects Storn.es"/>    <link href="http://www.storn.es/favicon.ico" rel="icon" type="image/x-icon" />
 <?php if (!$isRender && !empty($sort)) { ?>
     <link rel="canonical" href="<?=$serverPublic?>" />
 <?php } ?>
