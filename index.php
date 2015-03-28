@@ -85,7 +85,6 @@ if ($sort === 'date') {
         The objects are sorted by preference order (the most I like first).
 <?php } ?>
         <a href='#sortOptions'>Other order options</a>
-        </ul>
       </div>
 
 <div class="large-12 columns" style="overflow: visible">

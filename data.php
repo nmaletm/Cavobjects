@@ -253,3 +253,91 @@ $object->setDifficulty(4);
 $gallery->addObject($object);
 
 
+$object = new Object(23);
+$object->initGallery('Lamp/lamp-%d.jpg', 5);
+$object->setName('Lamp');
+$object->setDate('16/03/2015');
+$object->setMaterials(array('cork stopper', 'cava wire'));
+$object->setTools(array('pliers', 'knife', 'pens'));
+$object->setMark(8);
+$object->setDifficulty(7);
+$gallery->addObject($object);
+
+
+$object = new Object(24);
+$object->initGallery('Digger/digger-%d.jpg', 4);
+$object->setName('Digger');
+$object->setDate('16/03/2015');
+$object->setMaterials(array('cork stopper', 'cava wire', 'cava crown cork'));
+$object->setTools(array('pliers', 'knife', 'pens'));
+$object->setMark(8);
+$object->setDifficulty(9);
+$gallery->addObject($object);
+
+
+$object = new Object(25);
+$object->initGallery('Wineglass/wineglass-%d.jpg', 4);
+$object->setName('Wineglass');
+$object->setDate('16/03/2015');
+$object->setMaterials(array('cork stopper'));
+$object->setTools(array('knife', 'pens'));
+$object->setMark(4);
+$object->setDifficulty(7);
+$gallery->addObject($object);
+
+
+$object = new Object(26);
+$object->initGallery('London-phone/london-phone-%d.jpg', 2);
+$object->setName('London phone');
+$object->setDate('16/03/2015');
+$object->setMaterials(array('cork stopper'));
+$object->setTools(array('knife', 'pens'));
+$object->setMark(5);
+$object->setDifficulty(4);
+$gallery->addObject($object);
+
+
+$object = new Object(27);
+$object->initGallery('Watch/watch-%d.jpg', 3);
+$object->setName('Watch');
+$object->setDate('20/03/2015');
+$object->setMaterials(array('cork stopper', 'cava wire'));
+$object->setTools(array('pliers', 'knife', 'pens'));
+$object->setMark(5);
+$object->setDifficulty(4);
+$gallery->addObject($object);
+
+
+$object = new Object(28);
+$object->initGallery('Teo-monster/teo-monster-%d.jpg', 4);
+$object->setName('Teo monster');
+$object->setDate('20/03/2015');
+$object->setMaterials(array('cork stopper', 'cava wire'));
+$object->setTools(array('pliers', 'knife', 'pens'));
+$object->setMark(5);
+$object->setDifficulty(3);
+$gallery->addObject($object);
+
+
+$object = new Object(29);
+$object->initGallery('Shaver/shaver-%d.jpg', 3);
+$object->setName('Shaver');
+$object->setDate('24/03/2015');
+$object->setMaterials(array('cork stopper', 'cava wire'));
+$object->setTools(array('pliers', 'knife', 'pens'));
+$object->setMark(7);
+$object->setDifficulty(6);
+$gallery->addObject($object);
+
+
+$object = new Object(30);
+$object->initGallery('Sun/sun-%d.jpg', 3);
+$object->setName('Sun');
+$object->setDate('24/03/2015');
+$object->setMaterials(array('cork stopper', 'cava wire'));
+$object->setTools(array('pliers', 'knife', 'pens'));
+$object->setMark(3);
+$object->setDifficulty(4);
+$gallery->addObject($object);
+
+
