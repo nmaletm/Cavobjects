@@ -341,3 +341,28 @@ $object->setDifficulty(4);
 $gallery->addObject($object);
 
 
+$object = new Object(31);
+$object->initGallery('Sailboat2/sailboat2-%d.jpg', 5);
+$object->setName('Sailboat');
+$object->setDate('25/12/2015');
+$object->setMaterials(array('cork stopper', 'cava wire', 'toothpick'));
+$object->setTools(array('pliers', 'knife'));
+$object->setMark(8);
+$object->setDifficulty(7);
+$gallery->addObject($object);
+
+
+$object = new Object(32);
+$object->initGallery('Scooter/scooter-%d.jpg', 3);
+$object->setName('Scooter');
+$object->setDate('25/12/2015');
+$object->setMaterials(array('cork stopper', 'cava wire'));
+$object->setTools(array('pliers', 'knife'));
+$object->setMark(8);
+$object->setDifficulty(5);
+$gallery->addObject($object);
+
+
+
+
+
